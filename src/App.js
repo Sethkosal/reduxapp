@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 //to access global state
 import {useSelector, useDispatch} from 'react-redux';
-import {increment, decrement} from './actions';
+import {increment, decrement,log} from './actions';
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
       <button onClick={()=>dispatch(increment(5))}>+</button>
       <button onClick={()=>dispatch(decrement())}>-</button>
 
+      <button onClick={()=>dispatch(log())}>Sign in</button>
       {isLogged ? <h3>Top Secret if im not logged in.</h3>: ''}
       
     </div>
